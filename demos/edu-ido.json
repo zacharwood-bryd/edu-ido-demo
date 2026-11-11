@@ -1,20 +1,20 @@
 {
   "id": "edu-ido",
-  "title": "Northbridge Academy",
+  "title": "Northbridge University",
   "industry": "Education",
-  "company": "Northbridge Academy",
-  "useCase": "Slack for Education, with no Agentforce and no website chat, takes Maya Chen from an admissions stage change through her day on the course, and finishes on the admin controls for safeguarding.",
+  "company": "Northbridge University",
+  "useCase": "Slack for Education, backed by Education Cloud, keeps Maya Chen in the loop from offer to enrolment, gives the teams one view of her application, and gives her one place for her course, her questions, and the community beyond it.",
   "beats": [
-    "Northbridge Academy is the school account, and Maya Chen is the student.",
-    "A case opens when Maya's admissions stage changes, and the team works it together until she is welcomed in.",
+    "Northbridge University is the university account, and Maya Chen is the student.",
+    "A case opens when Maya's application moves on from offer, and the teams work it together until she is welcomed in.",
     "A case opens when Maya raises a request from her course.",
-    "The case moves to closed when an admin reviews the safeguarding question."
+    "The case moves to closed when Maya is enrolled and that same record is the one view of her."
   ],
   "slack": {
     "mode": "workspace",
-    "workspaceName": "Northbridge Academy",
+    "workspaceName": "Northbridge University",
     "workspaceDomain": "edu-ido",
-    "story": "Northbridge Academy\nSlack for Education, with no Agentforce and no website chat, takes Maya Chen from an admissions stage change through her day on the course, and finishes on the admin controls for safeguarding.\n1. Northbridge Academy is the school account, and Maya Chen is the student.\n2. A case opens when Maya's admissions stage changes, and the team works it together until she is welcomed in.\n3. A case opens when Maya raises a request from her course.\n4. The case moves to closed when an admin reviews the safeguarding question.\nTag: [demo-builder:edu-ido]"
+    "story": "Northbridge University\nSlack for Education, backed by Education Cloud, keeps Maya Chen in the loop from offer to enrolment, gives the teams one view of her application, and gives her one place for her course, her questions, and the community beyond it.\n1. Northbridge University is the university account, and Maya Chen is the student.\n2. A case opens when Maya's application moves on from offer, and the teams work it together until she is welcomed in.\n3. A case opens when Maya raises a request from her course.\n4. The case moves to closed when Maya is enrolled and that same record is the one view of her.\nTag: [demo-builder:edu-ido]"
   },
   "manualSteps": [
     {
@@ -46,18 +46,18 @@
     },
     {
       "id": "slack-surface",
-      "title": "Workspace Northbridge Academy",
-      "detail": "Create a workspace named Northbridge Academy with admin.teams.create. Use team_domain edu-ido. The app is already installed on the Enterprise Grid org and granted to new workspaces. Pass the new workspace id as team_id on workspace-level calls. Do not post a message. Salesforce for Slack is connected by hand after this workspace exists."
+      "title": "Workspace Northbridge University",
+      "detail": "Create a workspace named Northbridge University with admin.teams.create. Use team_domain edu-ido. The app is already installed on the Enterprise Grid org and granted to new workspaces. Pass the new workspace id as team_id on workspace-level calls. Do not post a message. Salesforce for Slack is connected by hand after this workspace exists."
     },
     {
       "id": "beat-1",
       "title": "Beat 1: Account",
-      "detail": "Create or update the Account. Northbridge Academy is the school account, and Maya Chen is the student. Tag the Name or Subject, and the Description, with [demo-builder:edu-ido]. Use an Industry picklist value the org already has."
+      "detail": "Create or update the Account. Northbridge University is the university account, and Maya Chen is the student. Tag the Name or Subject, and the Description, with [demo-builder:edu-ido]. Use an Industry picklist value the org already has."
     },
     {
       "id": "beat-2",
       "title": "Beat 2: Case",
-      "detail": "Create or update the Case. A case opens when Maya's admissions stage changes, and the team works it together until she is welcomed in. Tag the Name or Subject, and the Description, with [demo-builder:edu-ido]. Use an Industry picklist value the org already has."
+      "detail": "Create or update the Case. A case opens when Maya's application moves on from offer, and the teams work it together until she is welcomed in. Tag the Name or Subject, and the Description, with [demo-builder:edu-ido]. Use an Industry picklist value the org already has."
     },
     {
       "id": "beat-3",
@@ -67,12 +67,12 @@
     {
       "id": "beat-4",
       "title": "Beat 4: Case",
-      "detail": "Create or update the Case. The case moves to closed when an admin reviews the safeguarding question. Tag the Name or Subject, and the Description, with [demo-builder:edu-ido]. Use an Industry picklist value the org already has."
+      "detail": "Create or update the Case. The case moves to closed when Maya is enrolled and that same record is the one view of her. Tag the Name or Subject, and the Description, with [demo-builder:edu-ido]. Use an Industry picklist value the org already has."
     },
     {
       "id": "handoff-connector",
       "title": "Hand off the Slack connection",
-      "detail": "Stop here. Tell the person to connect the Northbridge Academy workspace to this Salesforce org with Salesforce for Slack. Do not deploy a flow, a named credential, or a callout. The native connector is what shows these records in Slack."
+      "detail": "Stop here. Tell the person to connect the Northbridge University workspace to this Salesforce org with Salesforce for Slack. Do not deploy a flow, a named credential, or a callout. The native connector is what shows these records in Slack."
     },
     {
       "id": "save-spec",
@@ -84,17 +84,17 @@
     {
       "label": "Open",
       "show": "Salesforce account",
-      "say": "Northbridge Academy is the education account. Slack for Education, with no Agentforce and no website chat, takes Maya Chen from an admissions stage change through her day on the course, and finishes on the admin controls for safeguarding."
+      "say": "Northbridge University is the education account. Slack for Education, backed by Education Cloud, keeps Maya Chen in the loop from offer to enrolment, gives the teams one view of her application, and gives her one place for her course, her questions, and the community beyond it."
     },
     {
       "label": "Beat 1",
       "show": "Account",
-      "say": "Northbridge Academy is the school account, and Maya Chen is the student."
+      "say": "Northbridge University is the university account, and Maya Chen is the student."
     },
     {
       "label": "Beat 2",
       "show": "Case",
-      "say": "A case opens when Maya's admissions stage changes, and the team works it together until she is welcomed in."
+      "say": "A case opens when Maya's application moves on from offer, and the teams work it together until she is welcomed in."
     },
     {
       "label": "Beat 3",
@@ -104,12 +104,12 @@
     {
       "label": "Beat 4",
       "show": "Case",
-      "say": "The case moves to closed when an admin reviews the safeguarding question."
+      "say": "The case moves to closed when Maya is enrolled and that same record is the one view of her."
     },
     {
       "label": "Close",
-      "show": "Northbridge Academy",
-      "say": "Connect Salesforce for Slack to the Northbridge Academy workspace, then open it. The seeded records are what you show."
+      "show": "Northbridge University",
+      "say": "Connect Salesforce for Slack to the Northbridge University workspace, then open it. The seeded records are what you show."
     }
   ],
   "salesforceIds": [],

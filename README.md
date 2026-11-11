@@ -1,66 +1,17 @@
-# EDU IDO demo seed
+# EDU IDO
 
-Python scripts (simple-salesforce + Faker) that seed an Education Cloud demo org with a fictional UK university, built around the three webinar personas: students, professors (faculty) and marketing staff.
+This demo is run by the [Slack demo seeder](https://github.com/zacharwood-bryd/sf-slack-demo-seeder). Follow `AGENT.md` in that repository. The brief is [`demos/edu-ido.json`](demos/edu-ido.json), built with that repo's `scripts/plan.mjs`.
 
-## What it creates
+Northbridge Academy is the school. Maya Chen is the student. Those names come from the seeder's education example. The tag on every record is `[demo-builder:edu-ido]`.
 
-| Step | Object | Records |
+The webinar is Slack for Education. No Agentforce. No website chat.
+
+| Part | What you show | What the seeder creates |
 | --- | --- | --- |
-| 1 | Account (business) | Northfield University + 5 department accounts |
-| 2 | AcademicTerm | Autumn 2026, Spring 2027 |
-| 3 | LearningProgram | 6 programmes, incl. the AI Leadership short course for the marketing scene |
-| 3 | LearningCourse | 6 modules |
-| 4 | Account (Person) | 100 students, 20 faculty, 5 marketing staff |
-| 5 | AccountContactRelation | Faculty and staff linked to their department |
-| 6 | ContactProfile | One per person: Student, Faculty or Staff |
-| 7 | CourseOffering | Each module in each term, with a faculty member as primary faculty |
-| 8 | LearnerProgram | Each student on one programme |
-| 9 | CourseOfferingParticipant | Each student on 3 modules this term |
+| Admissions | The stage change lands in Slack, the team works it together, Maya is welcomed in | School account, Maya's account, and the admissions case |
+| Her day | Course channels, Slackbot answers, a request she raises, a society | The course request case |
+| Close | Admin controls for the safeguarding question | The safeguarding case, moved to closed |
 
-All counts and names live in `seed/config.py`.
+The seeder creates a new Slack workspace named Northbridge Academy (`edu-ido`) and the Account and Case records. It does not create channels, post messages, or add a bot. Course channels, Slackbot, societies, and the admin screen are what you open in that workspace after you connect Salesforce for Slack yourself.
 
-## Schema safety
-
-Education Cloud field names and picklist values move between releases, so the loader describes each object first and:
-- skips fields the org doesn't have,
-- swaps a picklist value the org rejects for a valid one, and logs it,
-- warns about required fields it isn't filling,
-- skips an object entirely if it isn't in the org.
-
-Run `describe` first and check `describe_output.json` against what the loader sends.
-
-## Setup
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-sf org login web --alias edu-ido
-```
-
-## Run
-
-```bash
-python seed_org.py preview                          # no org: shows sample generated people
-python seed_org.py describe --target-org edu-ido    # dumps the org's EDU fields to describe_output.json
-python seed_org.py seed     --target-org edu-ido    # creates everything
-python seed_org.py teardown --target-org edu-ido    # deletes exactly what seed created
-```
-
-`seed` records every Id it creates in `seed_manifest.json` (git-ignored). `teardown` deletes from that file, newest first, which makes it a reset between demo runs. `seed` refuses to run again while the manifest has records, unless you pass `--force`.
-
-No `sf` CLI? Copy `.env.example` to `.env`, fill it in, and leave out `--target-org`.
-
-## Tests
-
-```bash
-python -m pytest -q
-```
-
-The tests run against a fake org, so they check the build order and record counts but not the real org's validation rules.
-
-## Not yet covered
-
-- Marketing staff are Person Accounts, not Salesforce Users (Users need licences).
-- No applications (IndividualApplication), cases, advisors or engagement data yet.
-- Not yet run against the real EDU IDO.
+Record ids and the Slack workspace id go in `demos/edu-ido.links.json`, which is gitignored. `salesforceIds` in the spec stays empty.

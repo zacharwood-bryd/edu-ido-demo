@@ -1,6 +1,2 @@
 .env
-.venv/
-__pycache__/
-.pytest_cache/
-seed_manifest.json
-describe_output.json
+demos/*.links.json

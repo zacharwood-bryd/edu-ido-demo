@@ -14,7 +14,9 @@ Maya Chen's name comes from the seeder's education example. Leah Mensah and Hele
 
 The university account is created with Maya's.
 
-The seeder creates a new Slack workspace named Northbridge University (`edu-ido`) and those Account and Case records. It does not create channels, post messages, or add a bot. Course channels, Slackbot, and societies are what you open in that workspace after you connect Salesforce for Slack yourself.
+The seeder creates a new Slack workspace named Northbridge University (`edu-ido`) and those Account and Case records. Its app stops there. It does not invite people or post messages.
+
+[`slack/manifest.json`](slack/manifest.json) is a second app, Northbridge Demo, for the part the seeder leaves out. Installed on an Enterprise Grid org, its org-admin token can create the workspace (`admin.teams:write`), invite Maya, Leah, and Helen by email (`admin.users:write`), and create the channels. The bot posts the webinar lines under their display names (`chat:write.customize`). A message is truly from that person's account only after they accept the invite and the app has their user token. Slack does not return a token from the invite.
 
 The walked staff view is Helen, the lecturer, because Leah's half of the demo is the course. Admissions is the other person on Maya's case, which is the moment the teams are on one record.
 

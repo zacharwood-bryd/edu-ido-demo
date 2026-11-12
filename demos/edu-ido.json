@@ -3,20 +3,20 @@
   "title": "Northbridge University",
   "industry": "Education",
   "company": "Northbridge University",
-  "useCase": "Slack for Education, backed by Education Cloud, shows Northbridge University through three views: Jordan the applicant from offer to enrolment, Jamie the student on the course, and Harry Kane the lecturer with one record of each.",
+  "useCase": "Slack for Education, backed by Education Cloud, shows Northbridge University through three views: Jordan the applicant from offer to enrolment, Jamie the student on the course, and Casey the lecturer with one record of each.",
   "beats": [
     "Northbridge University is the university account, and Jordan is the applicant account.",
     "A case opens when Jordan's application moves on from offer, and Jordan stays in the loop until welcomed in.",
     "Jamie is the student account, already on the course.",
     "A case opens when Jamie raises a request from the course.",
-    "Harry Kane is the lecturer account for Jordan's programme and Jamie's course.",
-    "The case moves to closed when Jordan is enrolled, and Harry Kane sees the same record Morgan Rogers in admissions sees."
+    "Casey is the lecturer account for Jordan's programme and Jamie's course.",
+    "The case moves to closed when Jordan is enrolled, and Casey sees the same record Alex in admissions sees."
   ],
   "slack": {
     "mode": "workspace",
     "workspaceName": "Northbridge University",
     "workspaceDomain": "edu-ido",
-    "story": "Northbridge University\nSlack for Education, backed by Education Cloud, shows Northbridge University through three views: Jordan the applicant from offer to enrolment, Jamie the student on the course, and Harry Kane the lecturer with one record of each.\n1. Northbridge University is the university account, and Jordan is the applicant account.\n2. A case opens when Jordan's application moves on from offer, and Jordan stays in the loop until welcomed in.\n3. Jamie is the student account, already on the course.\n4. A case opens when Jamie raises a request from the course.\n5. Harry Kane is the lecturer account for Jordan's programme and Jamie's course.\n6. The case moves to closed when Jordan is enrolled, and Harry Kane sees the same record Morgan Rogers in admissions sees.\nTag: [demo-builder:edu-ido]"
+    "story": "Northbridge University\nSlack for Education, backed by Education Cloud, shows Northbridge University through three views: Jordan the applicant from offer to enrolment, Jamie the student on the course, and Casey the lecturer with one record of each.\n1. Northbridge University is the university account, and Jordan is the applicant account.\n2. A case opens when Jordan's application moves on from offer, and Jordan stays in the loop until welcomed in.\n3. Jamie is the student account, already on the course.\n4. A case opens when Jamie raises a request from the course.\n5. Casey is the lecturer account for Jordan's programme and Jamie's course.\n6. The case moves to closed when Jordan is enrolled, and Casey sees the same record Alex in admissions sees.\nTag: [demo-builder:edu-ido]"
   },
   "manualSteps": [
     {
@@ -74,12 +74,12 @@
     {
       "id": "beat-5",
       "title": "Beat 5: Account",
-      "detail": "Create or update the Account. Harry Kane is the lecturer account for Jordan's programme and Jamie's course. Tag the Name or Subject, and the Description, with [demo-builder:edu-ido]. Use an Industry picklist value the org already has."
+      "detail": "Create or update the Account. Casey is the lecturer account for Jordan's programme and Jamie's course. Tag the Name or Subject, and the Description, with [demo-builder:edu-ido]. Use an Industry picklist value the org already has."
     },
     {
       "id": "beat-6",
       "title": "Beat 6: Case",
-      "detail": "Create or update the Case. The case moves to closed when Jordan is enrolled, and Harry Kane sees the same record Morgan Rogers in admissions sees. Tag the Name or Subject, and the Description, with [demo-builder:edu-ido]. Use an Industry picklist value the org already has."
+      "detail": "Create or update the Case. The case moves to closed when Jordan is enrolled, and Casey sees the same record Alex in admissions sees. Tag the Name or Subject, and the Description, with [demo-builder:edu-ido]. Use an Industry picklist value the org already has."
     },
     {
       "id": "handoff-connector",
@@ -96,7 +96,7 @@
     {
       "label": "Open",
       "show": "Salesforce account",
-      "say": "Northbridge University is the education account. Slack for Education, backed by Education Cloud, shows Northbridge University through three views: Jordan the applicant from offer to enrolment, Jamie the student on the course, and Harry Kane the lecturer with one record of each."
+      "say": "Northbridge University is the education account. Slack for Education, backed by Education Cloud, shows Northbridge University through three views: Jordan the applicant from offer to enrolment, Jamie the student on the course, and Casey the lecturer with one record of each."
     },
     {
       "label": "Beat 1",
@@ -121,12 +121,12 @@
     {
       "label": "Beat 5",
       "show": "Account",
-      "say": "Harry Kane is the lecturer account for Jordan's programme and Jamie's course."
+      "say": "Casey is the lecturer account for Jordan's programme and Jamie's course."
     },
     {
       "label": "Beat 6",
       "show": "Case",
-      "say": "The case moves to closed when Jordan is enrolled, and Harry Kane sees the same record Morgan Rogers in admissions sees."
+      "say": "The case moves to closed when Jordan is enrolled, and Casey sees the same record Alex in admissions sees."
     },
     {
       "label": "Close",

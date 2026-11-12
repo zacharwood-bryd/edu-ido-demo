@@ -5,6 +5,10 @@
     "name": "Demo seeder",
     "id": "A0CHPUUMC00"
   },
+  "workspace": {
+    "name": "Northbridge University",
+    "domain": "edu-ido"
+  },
   "people": [
     {
       "view": "applicant",
@@ -20,15 +24,15 @@
     },
     {
       "view": "lecturer",
-      "name": "Harry Kane",
-      "id": "U0BAP5LQYHG",
-      "email": "zacharwood2121@gmail.com"
+      "name": "Casey",
+      "id": "U0CHXUWHFEC",
+      "email": "zacharwoodjohns+casey@gmail.com"
     },
     {
       "view": "admissions",
-      "name": "Morgan Rogers",
-      "id": "U0C04B849GQ",
-      "email": "zacharwoodjohns@gmail.com"
+      "name": "Alex",
+      "id": "U0CH51S109F",
+      "email": "zac.harwood+alex@bryd.io"
     }
   ]
 }

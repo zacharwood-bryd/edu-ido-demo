@@ -1,0 +1,34 @@
+{
+  "org": "Meridian Group",
+  "enterpriseUrl": "https://zac-bryd-sandbox.enterprise.slack.com",
+  "app": {
+    "name": "Demo seeder",
+    "id": "A0CHPUUMC00"
+  },
+  "people": [
+    {
+      "view": "applicant",
+      "name": "Jordan",
+      "id": "U0CGN551SF9",
+      "email": "zacharwood2121+jordan@gmail.com"
+    },
+    {
+      "view": "student",
+      "name": "Jamie",
+      "id": "U0CHXUWHEJC",
+      "email": "zacharwood2121+jamie@gmail.com"
+    },
+    {
+      "view": "lecturer",
+      "name": "Harry Kane",
+      "id": "U0BAP5LQYHG",
+      "email": "zacharwood2121@gmail.com"
+    },
+    {
+      "view": "admissions",
+      "name": "Morgan Rogers",
+      "id": "U0C04B849GQ",
+      "email": "zacharwoodjohns@gmail.com"
+    }
+  ]
+}

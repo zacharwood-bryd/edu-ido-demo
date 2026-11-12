@@ -1,0 +1,38 @@
+{
+  "org": "Meridian Group",
+  "enterpriseUrl": "https://zac-bryd-sandbox.enterprise.slack.com",
+  "app": {
+    "name": "Demo seeder",
+    "id": "A0CHPUUMC00"
+  },
+  "workspace": {
+    "name": "Northbridge University",
+    "domain": "edu-ido"
+  },
+  "people": [
+    {
+      "view": "applicant",
+      "name": "Jordan",
+      "id": "U0CGN551SF9",
+      "email": "zacharwood2121+jordan@gmail.com"
+    },
+    {
+      "view": "student",
+      "name": "Jamie",
+      "id": "U0CHXUWHEJC",
+      "email": "zacharwood2121+jamie@gmail.com"
+    },
+    {
+      "view": "lecturer",
+      "name": "Casey",
+      "id": "U0CHXUWHFEC",
+      "email": "zacharwoodjohns+casey@gmail.com"
+    },
+    {
+      "view": "admissions",
+      "name": "Alex",
+      "id": "U0CH51S109F",
+      "email": "zac.harwood+alex@bryd.io"
+    }
+  ]
+}

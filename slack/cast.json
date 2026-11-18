@@ -29,10 +29,22 @@
       "email": "zacharwoodjohns+casey@gmail.com"
     },
     {
-      "view": "admissions",
+      "view": "student-services",
       "name": "Alex",
       "id": "U0CH51S109F",
       "email": "zac.harwood+alex@bryd.io"
+    },
+    {
+      "view": "finance",
+      "name": "Sam",
+      "id": "U0CH51SDF97",
+      "email": "zac.harwood+sam@bryd.io"
+    },
+    {
+      "view": "accommodation",
+      "name": "Riley",
+      "id": "U0CGN6SJ895",
+      "email": "zacharwoodjohns+riley@gmail.com"
     }
   ]
 }

@@ -1,19 +1,31 @@
 # EDU IDO
 
-This demo is run by the [Slack demo seeder](https://github.com/zacharwood-bryd/sf-slack-demo-seeder). Follow `AGENT.md` in that repository. The brief is [`demos/edu-ido.json`](demos/edu-ido.json), built with that repo's `scripts/plan.mjs`.
+This demo is run by the [Slack demo seeder](https://github.com/zacharwood-bryd/sf-slack-demo-seeder). Follow `AGENT.md` in that repository. The brief is [`demos/edu-ido.json`](demos/edu-ido.json).
 
-Northbridge University. The webinar is Slack for Education, backed by Education Cloud. The same three views fit a college: an applicant from offer to enrolment, a student already on a course, and a lecturer who sees both on one record.
+Northbridge University. The webinar is Slack for Education, backed by Education Cloud. It runs in three parts: student services, the lecturer, and the student. A short trust-and-safety close finishes it.
 
-The people are already members of the Meridian Group Enterprise org, the same org used for the frontline worker demo. Slack user ids and emails are in [`slack/cast.json`](slack/cast.json). The tag on every Salesforce record is `[demo-builder:edu-ido]`.
+The people are members of the Meridian Group Enterprise org. Slack user ids are in [`slack/cast.json`](slack/cast.json). The tag on every seeded record is `[demo-builder:edu-ido]`.
 
-| View | Who | What you show | What the seeder creates |
-| --- | --- | --- | --- |
-| Applicant | Jordan | The application moves on from offer and lands in Slack. Jordan stays in the loop and is welcomed in. Slackbot answers the repeat questions. Alex and Casey work the same case. | Jordan's account, and the offer case |
-| Student | Jamie | The course channel, Slackbot answers, a request Jamie raises, and a society beyond the course. | Jamie's account, and the course request case |
-| Lecturer | Casey | Jordan's application and Jamie's request on one record, the same record Alex has for Jordan. When Jordan is enrolled, that case is closed. | Casey's account. Jordan's case moved to closed. |
+| Part | Who | What you show |
+| --- | --- | --- |
+| Student services | Alex, with Sam in finance and Riley in accommodation | Jordan's application channel, the staff handbook canvas, and Jamie's laptop enquiry |
+| Lecturer | Casey | The history course and seminar, then Jamie's enrollment before the 1:1 |
+| Student | Jordan, then Jamie | Jordan arrives and meets Jamie. Jamie asks for a loan laptop and hears back in Slack |
+| Close | Presenter | Who can see student channels, where Slackbot is allowed to answer, and that students have no Salesforce licence |
 
-The university account is created with Jordan's.
-
-Demo seeder (`A0CHPUUMC00`) is already installed on the Meridian Group org. The new workspace is still Northbridge University (`edu-ido`). Invites go to the existing accounts in [`slack/cast.json`](slack/cast.json). Harry Kane and Morgan Rogers are deactivated and are not in the cast.
+Alex Fallon and Casey are the Salesforce users. Jordan, Jamie, Sam, and Riley use Slack only.
 
 Record ids and the Slack workspace id go in `demos/edu-ido.links.json`, which is gitignored. `salesforceIds` in the spec stays empty.
+
+## What you do live
+
+Slackbot is not seeded. In the webinar, ask it yourself.
+
+1. In `#app-jordan`, ask Slackbot: "Can Jordan defer the tuition deposit while a visa is pending?" The answer is in the Staff handbook canvas: 14 days, source Fees, Winter 2026.
+2. As Casey, ask Slackbot what needs attention in `#course-channel` and `#seminar`.
+3. In `#seminar`, open Jamie's program enrollment from the link in Casey's post, then show Casey's follow-up.
+4. In `#course-channel`, ask Slackbot: "What happens if my laptop will not start?" The answer is in the Student FAQ canvas.
+5. In `#student-services`, ask Slackbot to update Jamie's broken-laptop case, and approve it only after the preview. If Slackbot cannot write to Education Cloud, show the case Alex already owns and say the update would come back on this thread.
+6. Close on trust and safety: student channels are only for the people in them, Slackbot answers from the canvases you opened, and Jordan and Jamie have no Salesforce user.
+
+Open `#app-jordan` before you start and check that the Education Cloud links show a Salesforce preview. If they stay plain links, add Salesforce for Slack to that channel.

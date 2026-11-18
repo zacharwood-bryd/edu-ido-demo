@@ -110,7 +110,7 @@
     {
       "label": "Lecturer",
       "show": "#seminar",
-      "say": "Ask Slackbot what needs attention today. Then open Jamie's enrollment: 6 of 8 sessions. Casey's follow-up is already in the seminar."
+      "say": "Open Jamie's enrollment in Education Cloud: 6 of 8 sessions. Casey's follow-up is in the seminar, and that post does not include the record."
     },
     {
       "label": "Arrival",

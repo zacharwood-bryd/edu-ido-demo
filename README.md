@@ -8,10 +8,10 @@ The people are members of the Meridian Group Enterprise org. Slack user ids are 
 
 | Part | Who | What you show |
 | --- | --- | --- |
-| Student services | Alex, with Sam in finance and Riley in accommodation | Jordan's application channel, the staff handbook canvas, and Jamie's laptop enquiry |
-| Lecturer | Casey | The history course and seminar, then Jamie's enrollment before the 1:1 |
-| Student | Jordan, then Jamie | Jordan arrives and meets Jamie. Jamie asks for a loan laptop and hears back in Slack |
-| Close | Presenter | Who can see student channels, where Slackbot is allowed to answer, and that students have no Salesforce licence |
+| Student services | Alex, Sam, Riley | The record channel for Jordan's application. Jordan is not in it. |
+| Nudge | Alex and Jordan | A direct message. No Salesforce record in that conversation. Alex brings Jordan's reply back to the record channel. |
+| Lecturer | Casey | Reads Jamie's enrollment, then writes the follow-up in `#seminar` without the record. |
+| Student | Jordan, Jamie | The course channel and `#student-services`. Jamie hears the outcome in Slack. The case stays with Alex. |
 
 Alex Fallon and Casey are the Salesforce users. Jordan, Jamie, Sam, and Riley use Slack only.
 
@@ -21,11 +21,11 @@ Record ids and the Slack workspace id go in `demos/edu-ido.links.json`, which is
 
 Slackbot is not seeded. In the webinar, ask it yourself.
 
-1. In `#app-jordan`, ask Slackbot: "Can Jordan defer the tuition deposit while a visa is pending?" The answer is in the Staff handbook canvas: 14 days, source Fees, Winter 2026.
-2. As Casey, ask Slackbot what needs attention in `#course-channel` and `#seminar`.
-3. In `#seminar`, open Jamie's program enrollment from the link in Casey's post, then show Casey's follow-up.
+1. In the record channel, ask Slackbot: "Can Jordan defer the tuition deposit while a visa is pending?" The answer is in the Staff handbook canvas: 14 days, source Fees, Winter 2026. Jordan is not in this channel.
+2. Show Alex's direct message to Jordan, then Alex's note back on the record channel that Jordan still wants the place.
+3. Open Jamie's program enrollment in Education Cloud. Then show Casey's follow-up in `#seminar`. That post does not contain the record.
 4. In `#course-channel`, ask Slackbot: "What happens if my laptop will not start?" The answer is in the Student FAQ canvas.
-5. In `#student-services`, ask Slackbot to update Jamie's broken-laptop case, and approve it only after the preview. If Slackbot cannot write to Education Cloud, show the case Alex already owns and say the update would come back on this thread.
-6. Close on trust and safety: student channels are only for the people in them, Slackbot answers from the canvases you opened, and Jordan and Jamie have no Salesforce user.
+5. In `#student-services`, ask Slackbot to update Jamie's broken-laptop case, and approve it only after the preview. Jamie's thread stays in ordinary language. The case stays on Alex's side.
+6. Close on trust and safety: the record channel is staff only, Slackbot answers from the canvases you opened, and Jordan and Jamie have no Salesforce user.
 
-Jordan's application is a Salesforce record channel, not a normal Slack channel and not an app you add to a channel. `#app-jordan` is only a stand-in until that record channel exists. In Setup, search for Slack Channels for Records, turn on Show Slack Button on Selected Objects, and add Individual Application.
+`#app-jordan` is the staff stand-in until the Individual Application has its own record channel. In Setup, search for Slack Channels for Records, turn on Show Slack Button on Selected Objects, and add Individual Application. The applicant conversation stays the direct message and the course channel.

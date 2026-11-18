@@ -7,7 +7,7 @@
   "beats": [
     "Jordan's BA History application moves to Application Decision. The offer is Admit, Jordan has accepted, and the conversation is the Salesforce record channel for that Individual Application.",
     "Sam in finance and Riley in accommodation work that same channel, with the deposit case and the room hold in view.",
-    "Jordan has gone quiet. Alex nudges Jordan from the application channel.",
+    "Jordan has gone quiet. Alex messages Jordan directly. Jordan is not in the record channel. Alex brings the reply back to that channel.",
     "Slackbot answers whether a visa can defer the tuition deposit, from the staff handbook canvas, and cites the source.",
     "Jamie asks for a loan laptop in #student-services. The enquiry is a case Alex owns. Slackbot updates it only after a preview and approval.",
     "Slackbot catches Casey up on #course-channel and #seminar.",
@@ -41,7 +41,7 @@
     {
       "id": "record-channel",
       "title": "Make Jordan's application a Salesforce record channel",
-      "detail": "In Setup, search for Slack Channels for Records. Turn on Show Slack Button on Selected Objects and add Individual Application. Create the record channel for Jordan's Individual Application with admin.conversations.createForObjects. Do not add an app to a normal channel, and do not paste a record link in place of the record channel."
+      "detail": "In Setup, search for Slack Channels for Records. Turn on Show Slack Button on Selected Objects and add Individual Application. Create the record channel for Jordan's Individual Application with admin.conversations.createForObjects. Only Alex, Sam, and Riley are in it. The applicant conversation is a direct message and the course channel, with no Salesforce record in it."
     },
     {
       "id": "slackbot-live",
@@ -63,7 +63,7 @@
     {
       "id": "beat-application",
       "title": "Jordan's application channel",
-      "detail": "Create Jordan's Individual Application at Application Decision, with an Admit decision and applicant decision Accept. Create the tuition deposit case and the accommodation hold. Post the channel thread as Alex, Sam, Riley, then Alex's nudge."
+      "detail": "Create Jordan's Individual Application at Application Decision, with an Admit decision and applicant decision Accept. Create the tuition deposit case and the accommodation hold. The record channel is staff only. Alex messages Jordan separately, then posts the outcome back on the record channel."
     },
     {
       "id": "beat-lecturer",
@@ -94,8 +94,8 @@
     },
     {
       "label": "Nudge",
-      "show": "#app-jordan",
-      "say": "Jordan went quiet after accepting. Alex nudges from Slack instead of chasing by email."
+      "show": "Alex's direct message, then the record channel",
+      "say": "Jordan went quiet after accepting. Alex messages Jordan directly. The record channel never includes Jordan. Alex posts the reply back with Sam and Riley."
     },
     {
       "label": "Handbook",
@@ -105,7 +105,7 @@
     {
       "label": "Enquiry",
       "show": "#student-services",
-      "say": "Jamie's laptop request is a case Alex owns. Ask Slackbot to update it, and approve only after the preview. IT and HR can run the same pattern through Halo or another ITSM tool."
+      "say": "Jamie asks in Slack. Alex replies there in ordinary language. The case stays with Alex. Ask Slackbot to update it, and approve only after the preview."
     },
     {
       "label": "Lecturer",

@@ -5,7 +5,7 @@
   "company": "Northbridge University",
   "useCase": "Slack for Education, backed by Education Cloud. Student services works one application with finance and accommodation, a lecturer prepares a 1:1 from the student record, and a student gets help in Slack without a Salesforce licence.",
   "beats": [
-    "Jordan's BA History application moves to Application Decision. The offer is Admit, Jordan has accepted, and the update is in #app-jordan.",
+    "Jordan's BA History application moves to Application Decision. The offer is Admit, Jordan has accepted, and the conversation is the Salesforce record channel for that Individual Application.",
     "Sam in finance and Riley in accommodation work that same channel, with the deposit case and the room hold in view.",
     "Jordan has gone quiet. Alex nudges Jordan from the application channel.",
     "Slackbot answers whether a visa can defer the tuition deposit, from the staff handbook canvas, and cites the source.",
@@ -26,7 +26,7 @@
     {
       "id": "install-slack-app",
       "title": "Install the workspace app on the Enterprise Grid org",
-      "detail": "Create a Slack app from slack/manifest.json and install it on the Enterprise Grid org, not on a single workspace. Grant it to Northbridge University. This app posts the seeded scenes as the cast. It is not the Salesforce for Slack app, and it does not answer as Slackbot."
+      "detail": "Create a Slack app from slack/manifest.json and install it on the Enterprise Grid org, not on a single workspace. Grant it to Northbridge University. This app posts the seeded scenes as the cast. It does not answer as Slackbot. The user token also needs admin.conversations:manage_objects so it can create a Salesforce record channel."
     },
     {
       "id": "slack-token",
@@ -39,9 +39,9 @@
       "detail": "Sign the coding agent into the Salesforce org that should receive the records. A demo org is the usual choice. The agent uses whichever org that login opens. This login does not connect Slack."
     },
     {
-      "id": "slack-salesforce",
-      "title": "Connect this workspace with Salesforce for Slack",
-      "detail": "Add the Salesforce for Slack app to Northbridge University and to #app-jordan. Connect it to the Salesforce org you seeded. That native connector is how record links become previews. Do not replace it with a flow, a named credential, or a call to chat.postMessage."
+      "id": "record-channel",
+      "title": "Make Jordan's application a Salesforce record channel",
+      "detail": "In Setup, search for Slack Channels for Records. Turn on Show Slack Button on Selected Objects and add Individual Application. Create the record channel for Jordan's Individual Application with admin.conversations.createForObjects. Do not add an app to a normal channel, and do not paste a record link in place of the record channel."
     },
     {
       "id": "slackbot-live",

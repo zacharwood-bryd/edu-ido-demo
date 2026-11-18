@@ -28,4 +28,4 @@ Slackbot is not seeded. In the webinar, ask it yourself.
 5. In `#student-services`, ask Slackbot to update Jamie's broken-laptop case, and approve it only after the preview. If Slackbot cannot write to Education Cloud, show the case Alex already owns and say the update would come back on this thread.
 6. Close on trust and safety: student channels are only for the people in them, Slackbot answers from the canvases you opened, and Jordan and Jamie have no Salesforce user.
 
-Open `#app-jordan` before you start and check that the Education Cloud links show a Salesforce preview. If they stay plain links, add Salesforce for Slack to that channel.
+Jordan's application is a Salesforce record channel, not a normal Slack channel and not an app you add to a channel. `#app-jordan` is only a stand-in until that record channel exists. In Setup, search for Slack Channels for Records, turn on Show Slack Button on Selected Objects, and add Individual Application.

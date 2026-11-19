@@ -28,4 +28,4 @@ Slackbot is not seeded. In the webinar, ask it yourself.
 5. In `#student-services`, ask Slackbot to update Jamie's broken-laptop case, and approve it only after the preview. Jamie's thread stays in ordinary language. The case stays on Alex's side.
 6. Close on trust and safety: the record channel is staff only, Slackbot answers from the canvases you opened, and Jordan and Jamie have no Salesforce user.
 
-Jordan's record channel is the Individual Application channel. Its name comes from Friendly Name on the application: the student name and subject code, for example Jordan HIST. Friendly Name is the first field on the Admissions compact layout, which Slack uses for the record. The applicant conversation stays the direct message and the course channel.
+Jordan's record channel is the Individual Application channel. Its name comes from Friendly Name on the application: the student name and subject code, for example Jordan Hale HIST. Friendly Name is the first field on the Admissions compact layout, which Slack uses for the record. The applicant conversation stays the direct message and the course channel.

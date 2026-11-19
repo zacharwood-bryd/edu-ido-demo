@@ -41,12 +41,12 @@
     {
       "id": "record-channel",
       "title": "Make Jordan's application a Salesforce record channel",
-      "detail": "In Setup, search for Slack Channels for Records. Turn on Show Slack Button on Selected Objects and add Individual Application. Create the record channel for Jordan's Individual Application with admin.conversations.createForObjects. Only Alex, Sam, and Riley are in it. The applicant conversation is a direct message and the course channel, with no Salesforce record in it."
+      "detail": "Individual Application is already enabled for Slack Channels for Records. Jordan's record channel is staff only: Alex, Sam, and Riley. Friendly Name on the application is the channel name, student name plus subject code. The applicant conversation is a direct message and the course channel, with no Salesforce record in it."
     },
     {
       "id": "slackbot-live",
       "title": "Ask Slackbot during the webinar",
-      "detail": "Do not seed messages as Slackbot. In #app-jordan ask about deferring Jordan's deposit during a visa wait. As Casey, ask what needs attention in the course and seminar. In #course-channel ask what happens when a laptop will not start. In #student-services, ask Slackbot to update Jamie's laptop case and approve only after the preview."
+      "detail": "Do not seed messages as Slackbot. In Jordan's record channel ask about deferring the deposit during a visa wait. As Casey, ask what needs attention in the course and seminar. In #course-channel ask what happens when a laptop will not start. In #student-services, ask Slackbot to update Jamie's laptop case and approve only after the preview."
     }
   ],
   "agentSteps": [
@@ -58,7 +58,7 @@
     {
       "id": "slack-surface",
       "title": "Workspace Northbridge University",
-      "detail": "Use the Northbridge University workspace. Post as the cast with each person's user token. Channels are #app-jordan, #course-channel, #seminar, and #student-services."
+      "detail": "Use the Northbridge University workspace. Post as the cast with each person's user token. Jordan's application is a Salesforce record channel named from Friendly Name. The other channels are #course-channel, #seminar, and #student-services."
     },
     {
       "id": "beat-application",
@@ -89,7 +89,7 @@
   "talkTrack": [
     {
       "label": "Student services",
-      "show": "#app-jordan",
+      "show": "Jordan's record channel",
       "say": "One application, one channel. Jordan accepted the BA History offer. Sam has the deposit, Riley has the room, and the record is the link in the thread."
     },
     {

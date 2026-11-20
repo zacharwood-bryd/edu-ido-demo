@@ -3,50 +3,40 @@
   "title": "Northbridge University",
   "industry": "Education",
   "company": "Northbridge University",
-  "useCase": "Slack for Education, backed by Education Cloud. Student services works one application with finance and accommodation, a lecturer prepares a 1:1 from the student record, and a student gets help in Slack without a Salesforce licence.",
+  "useCase": "Slack for Education, backed by Education Cloud. Student services, a lecturer, and two students work Jordan Hale's offer and Jamie's first weeks. Only Alex has a Salesforce licence.",
   "beats": [
-    "Jordan's BA History application moves to Application Decision. The offer is Admit, Jordan has accepted, and the conversation is the Salesforce record channel for that Individual Application.",
-    "Sam in finance and Riley in accommodation work that same channel, with the deposit case and the room hold in view.",
-    "Jordan has gone quiet. Alex messages Jordan directly. Jordan is not in the record channel. Alex brings the reply back to that channel.",
-    "Slackbot answers whether a visa can defer the tuition deposit, from the staff handbook canvas, and cites the source.",
-    "Jamie asks for a loan laptop in #student-services. The enquiry is a case Alex owns. Slackbot updates it only after a preview and approval.",
-    "Slackbot catches Casey up on #course-channel and #seminar.",
-    "Casey reads Jamie's program enrollment, 6 of 8 sessions, and follows up in #seminar.",
-    "Jordan replies, is welcomed in, and meets Jamie on the history course.",
-    "Slackbot answers the laptop FAQ from the student canvas. Alex replies on the case in Slack.",
-    "Trust and safety: student channels stay with the people in them, Slackbot answers from the canvases shown, and students have no Salesforce licence."
+    "Jordan Hale HIST is the record channel for Jordan's History application. The record sits at the top. Sam has the fee plan, Riley has the Harbour Hall room, and the latest message is the Offer accepted alert.",
+    "Slackbot answers the accommodation deposit deadline from the Staff handbook, and cites Fees, Winter 2026.",
+    "Slackbot builds a view of History offer holders with no contact in 14 days and what is still outstanding. Jordan is one of four.",
+    "Slackbot drafts Alex's direct message to Jordan, including the Welcome checklist. Alex edits a word and sends it. Slackbot then logs the contact and a Thursday follow-up, after Alex approves the preview.",
+    "Casey has no Salesforce licence. Slackbot catches Casey up on the History channels. #history-staff has Jamie's engagement alert: missed 2 HIS201 seminars.",
+    "Casey messages Jamie about 15 minutes after Thursday's seminar, then shows the week 7 reading pinned in #his201-seminar-b.",
+    "Jordan ticks the first two items on the Welcome checklist, meets Jamie in #history-offer-holders, and asks Slackbot about the deposit. The answer comes from the Student FAQ.",
+    "Jamie's sidebar is Course, Campus, and Societies. Slackbot offers the Student help request for a broken laptop and an essay due Friday.",
+    "Alex claims the request in #student-help-triage, approves a case for the laptop and the HIS201 extension, and resolves it.",
+    "Trust and safety is talk track: separate workspaces, content filtering, Slackbot permissions, retention, and Slack alongside Microsoft."
   ],
   "slack": {
     "mode": "workspace",
     "workspaceName": "Northbridge University",
     "workspaceDomain": "edu-ido",
-    "story": "Northbridge University\nSlack for Education, backed by Education Cloud.\n1. Jordan's accepted BA History application is one channel. Alex, Sam, and Riley work it.\n2. Alex nudges Jordan, who has gone quiet.\n3. Slackbot answers a visa deposit question from the staff handbook.\n4. Jamie's laptop enquiry is a case, updated through Slackbot after approval.\n5. Casey catches up on the course and seminar, reads Jamie's enrollment, and posts in #seminar.\n6. Jordan arrives, meets Jamie, and uses the course channels.\n7. Close on trust and safety.\nTag: [demo-builder:edu-ido]"
+    "story": "Northbridge University\nSlack for Education, backed by Education Cloud.\nOne workspace. Separate staff and student workspaces are talk track.\n1. Jordan Hale HIST is the record channel. Alex, Sam, and Riley. Jordan is not in it.\n2. Slackbot answers the deposit policy, then builds the quiet History offer holder view.\n3. Alex nudges Jordan with the welcome checklist, then logs the contact.\n4. Casey catches up, sees Jamie's engagement alert, and messages Jamie.\n5. Jordan ticks the checklist and meets Jamie in #history-offer-holders.\n6. Jamie raises a Student help request. Alex turns it into a case.\n7. Close on trust and safety.\nTag: [demo-builder:edu-ido]"
   },
   "manualSteps": [
     {
-      "id": "install-slack-app",
-      "title": "Install the workspace app on the Enterprise Grid org",
-      "detail": "Create a Slack app from slack/manifest.json and install it on the Enterprise Grid org, not on a single workspace. Grant it to Northbridge University. This app posts the seeded scenes as the cast. It does not answer as Slackbot. The user token also needs admin.conversations:manage_objects so it can create a Salesforce record channel."
+      "id": "sidebar-sections",
+      "title": "Group Jamie's sidebar",
+      "detail": "In Jamie's Slack client, make three sections: Course (#his201-seminar-b and #history-offer-holders), Campus (#campus), Societies (#film-society). The API cannot set sidebar sections."
     },
     {
-      "id": "slack-token",
-      "title": "Store a user token for each person who speaks",
-      "detail": "Each speaker needs their own user token with chat:write, granted on the Northbridge University workspace. Keep the tokens in the coding agent's secret store. Do not put them in a Salesforce named credential. Keep them out of git."
-    },
-    {
-      "id": "salesforce-connect",
-      "title": "Connect the Salesforce org to seed",
-      "detail": "Sign the coding agent into the Salesforce org that should receive the records. A demo org is the usual choice. The agent uses whichever org that login opens. This login does not connect Slack."
-    },
-    {
-      "id": "record-channel",
-      "title": "Make Jordan's application a Salesforce record channel",
-      "detail": "Individual Application is already enabled for Slack Channels for Records. Jordan's record channel is staff only: Alex, Sam, and Riley. Friendly Name on the application is the channel name, student name plus subject code. The applicant conversation is a direct message and the course channel, with no Salesforce record in it."
+      "id": "help-workflow",
+      "title": "Build the Student help request",
+      "detail": "In Workflow Builder, create a shortcut named Student help request. One form field for what they need. Post the answer to #student-help-triage. Add Claim and Resolve on that message if the builder offers the buttons. Leave the channel empty until the live submit."
     },
     {
       "id": "slackbot-live",
       "title": "Ask Slackbot during the webinar",
-      "detail": "Do not seed messages as Slackbot. In Jordan's record channel ask about deferring the deposit during a visa wait. As Casey, ask what needs attention in the course and seminar. In #course-channel ask what happens when a laptop will not start. In #student-services, ask Slackbot to update Jamie's laptop case and approve only after the preview."
+      "detail": "Do not seed messages as Slackbot. Rehearse every prompt in the script once. Skip the stage reset: the Offer accepted alert is already the latest message in Jordan Hale HIST, and this org does not post a new message when Application Stage changes."
     }
   ],
   "agentSteps": [
@@ -58,74 +48,69 @@
     {
       "id": "slack-surface",
       "title": "Workspace Northbridge University",
-      "detail": "Use the Northbridge University workspace. Post as the cast with each person's user token. Jordan's application is a Salesforce record channel named from Friendly Name. The other channels are #course-channel, #seminar, and #student-services."
+      "detail": "Stay in the one Northbridge University workspace. The record channel keeps its name. The other channels are #history-staff, #his201-seminar-b, #history-offer-holders, #student-help-triage, #campus, and #film-society."
     },
     {
       "id": "beat-application",
-      "title": "Jordan's application channel",
-      "detail": "Create Jordan's Individual Application at Application Decision, with an Admit decision and applicant decision Accept. Create the tuition deposit case and the accommodation hold. The record channel is staff only. Alex messages Jordan separately, then posts the outcome back on the record channel."
+      "title": "Jordan Hale HIST",
+      "detail": "Staff only: Alex, Sam, and Riley. Sam's message is the fee plan waiting on the first payment. Riley's message is Harbour Hall, deposit due Friday 4 December, no reply. The latest message is the Offer accepted alert. No Salesforce URL."
+    },
+    {
+      "id": "quiet-holders",
+      "title": "Quiet History offer holders",
+      "detail": "Maya Ellison, Owen Blake, and Priya Shah are also Offer accepted, with no staff contact in 14 days, and a different outstanding item. Jordan's outstanding items are the fee plan and the accommodation deposit. Last staff contact for Jordan is 20 October 2026."
     },
     {
       "id": "beat-lecturer",
-      "title": "Casey's course and seminar",
-      "detail": "Enroll Jamie on the history seminar with 6 attended and 2 absent. Post the course and seminar lines as Casey and Jamie."
+      "title": "Casey's History channels",
+      "detail": "Casey is Slack only. #history-staff has the engagement alert. #his201-seminar-b has the week 7 reading pinned and two unanswered posts from Jamie."
     },
     {
       "id": "beat-student",
-      "title": "Arrival and the laptop case",
-      "detail": "Post Jordan's reply and welcome, Jamie's greeting on the course, and Jamie's laptop request in #student-services. The case is owned by Alex."
-    },
-    {
-      "id": "canvases",
-      "title": "Handbook, FAQ, and next steps",
-      "detail": "Create the staff handbook, student FAQ, and next-steps canvases and share them to the channels that need them. Do not post as Slackbot."
-    },
-    {
-      "id": "save-spec",
-      "title": "Save the spec",
-      "detail": "Write this plan to demos/edu-ido.json with salesforceIds left empty. Put record ids and the Slack workspace id only in demos/edu-ido.links.json."
+      "title": "Offer holders and Jamie's day",
+      "detail": "#history-offer-holders has only Jamie's offer to answer questions. Campus and film society give Jamie the other sidebar sections. The Welcome checklist is shared so Jordan can tick it."
     }
   ],
   "talkTrack": [
     {
-      "label": "Student services",
-      "show": "Jordan's record channel",
-      "say": "One application, one channel. Jordan accepted the BA History offer. Sam has the deposit, Riley has the room, and the record is the link in the thread."
-    },
-    {
-      "label": "Nudge",
-      "show": "Alex's direct message, then the record channel",
-      "say": "Jordan went quiet after accepting. Alex messages Jordan directly. The record channel never includes Jordan. Alex posts the reply back with Sam and Riley."
+      "label": "Record channel",
+      "show": "Jordan Hale HIST",
+      "say": "This is a record channel, tied to Jordan Hale's History application. The record sits at the top. When the offer was accepted, the channel heard about it. Sam and Riley are in the same conversation, and neither has a Salesforce licence."
     },
     {
       "label": "Handbook",
       "show": "Staff handbook",
-      "say": "Ask Slackbot whether a pending visa can defer the tuition deposit. The answer is 14 days, and the source is the staff handbook, Fees, Winter 2026."
+      "say": "Ask Slackbot what happens if an offer holder misses the accommodation deposit deadline. The room stays held, the date can be extended, and the source is the staff handbook."
     },
     {
-      "label": "Enquiry",
-      "show": "#student-services",
-      "say": "Jamie asks in Slack. Alex replies there in ordinary language. The case stays with Alex. Ask Slackbot to update it, and approve only after the preview."
+      "label": "Quiet offer holders",
+      "show": "Slackbot view",
+      "say": "Ask for History offer holders we have not heard from in 14 days, and what is still outstanding. Jordan is not the only one."
+    },
+    {
+      "label": "Nudge",
+      "show": "Alex's direct message",
+      "say": "Slackbot drafts the Harbour Hall note, with the checklist. Alex edits a word and sends it. Then Slackbot logs the contact and a Thursday task, and Alex approves the preview."
     },
     {
       "label": "Lecturer",
-      "show": "#seminar",
-      "say": "Open Jamie's enrollment in Education Cloud: 6 of 8 sessions. Casey's follow-up is in the seminar, and that post does not include the record."
+      "show": "#history-staff and #his201-seminar-b",
+      "say": "Casey has no Salesforce licence. The engagement alert comes to Casey in Slack. The week 7 reading is pinned where the seminar already talks."
     },
     {
-      "label": "Arrival",
-      "show": "#course-channel",
-      "say": "Jordan replies, gets the next steps, and meets Jamie on the history course."
+      "label": "Students",
+      "show": "#history-offer-holders",
+      "say": "Jordan ticks the checklist and asks Jamie about Harbour Hall. Slackbot answers the deposit question from the student FAQ."
     },
     {
-      "label": "FAQ",
-      "show": "Student FAQ",
-      "say": "Ask Slackbot what happens when a laptop will not start. It answers from the student FAQ and cites IT, Winter 2026."
+      "label": "Help",
+      "show": "#student-help-triage",
+      "say": "Jamie asks about a broken laptop and an essay due Friday, and raises the request in the same place. Alex claims it, approves the case, and resolves it."
     },
     {
       "label": "Close",
       "show": "Northbridge University",
-      "say": "Student channels are only for the people in them. Slackbot answers from the canvases you showed. Jordan and Jamie have no Salesforce licence."
+      "say": "Separate workspaces, content filtering, Slackbot limited to what each person can see, and retention. Sam, Riley, and Casey saw only what was shared. Slack sits alongside Microsoft."
     }
   ],
   "salesforceIds": [],

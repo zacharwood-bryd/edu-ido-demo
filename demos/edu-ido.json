@@ -31,7 +31,7 @@
     {
       "id": "help-workflow",
       "title": "Build the Student help request",
-      "detail": "In Workflow Builder, create a shortcut named Student help request. One form field for what they need. Post the answer to #student-help-triage. Add Claim and Resolve on that message if the builder offers the buttons. Leave the channel empty until the live submit."
+      "detail": "In Workflow Builder, create a shortcut named Student help request. Fields: What do you need? (checkboxes: Laptop or IT, Coursework extension, Fees or funding, Accommodation, Wellbeing, Something else), Course (dropdown: HIS201, Not a specific course), Needed by (date), What happened (rich text). Post the answers to #student-help-triage with Claim and Resolve. Resolve asks for one rich-text Note. Leave the channel empty until the live submit. Jamie ticks Laptop or IT and Coursework extension, chooses HIS201, sets Friday 4 December 2026, and says the laptop will not open files and the essay needs an extension."
     },
     {
       "id": "slackbot-live",

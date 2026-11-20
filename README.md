@@ -23,7 +23,31 @@ Slackbot is not seeded. Ask it yourself. Run each prompt once before the webinar
 
 1. Open Jordan Hale HIST. Point at the record at the top, then open the threads on Sam's fee plan message and Riley's Harbour Hall message. The conversation is staff only. When you add the Education Cloud alert, it becomes the newest message in the channel. Post that alert from the automation, not as a person. Skip the stage reset until that automation is in place.
 2. Ask Slackbot: "What's our policy if an offer holder misses the accommodation deposit deadline?" Open the Staff handbook canvas it cites. The answer is that Harbour Hall stays held and the date can be extended. The deposit is due Friday 4 December. Source: Fees, Winter 2026.
-3. Ask Slackbot: "Build me a view of History offer holders we haven't heard from in the last 14 days, with what's still outstanding for each." Jordan Hale, Maya Ellison, Owen Blake, and Priya Shah are the quiet ones. Outstanding is on each application.
+3. Paste this to Slackbot. Individual Application is not available through its query, so the prompt carries the four students.
+
+```
+Create a canvas titled "Who's drifting: History offer holders".
+
+Use only the four students in this message. Do not search Slack. Do not query Salesforce. Do not add anyone else, and do not cite messages or records.
+
+Count the days since last contact from today's date. Sort with the longest silence first. Anyone with no contact on record goes first.
+
+Open with one line: how many History offer holders are quiet, and that Jordan's Harbour Hall deposit is due Friday 4 December.
+
+Then one block per student. Show the name, BA History, the days since last contact as a bar of squares (one square per week, so the longest silence is the longest bar), what is still open, and a single next step.
+
+Priya Shah. BA History. No staff contact on record. Still open: fee plan, and accommodation deposit. Next step: this is the first nudge. One message, both items.
+
+Jordan Hale. BA History. Last contact 20 October 2026. Still open: the first payment on the fee plan, and the Harbour Hall deposit due Friday 4 December. Next step: message Jordan about the room. Leave the fee plan until they reply.
+
+Maya Ellison. BA History. Last contact 28 October 2026. Still open: fee plan. Next step: a short note on the fee plan only.
+
+Owen Blake. BA History. Last contact 1 November 2026. Still open: accommodation deposit. Next step: a short note on the deposit only.
+
+Under the four blocks, close with this sentence: Jordan accepted the History offer and then went quiet. Maya, Owen and Priya are in the same gap.
+
+If a canvas is not available, post this same layout in the reply.
+```
 4. Ask Slackbot to draft the Harbour Hall nudge, with the deposit due Friday, an offer to extend, and a link to the Welcome checklist. Edit a word, then send it to Jordan as a direct message.
 5. Ask Slackbot to log today's deposit contact on Jordan's application and add a follow-up task for Thursday. Approve only after the preview.
 6. As Casey, ask Slackbot to catch you up on History channels since Friday, then what Jamie has posted in HIS201. Open `#history-staff` and the thread where Alex tells Casey that Jamie missed 2 HIS201 seminars. Casey offers 15 minutes after Thursday's seminar. If you add an Education Cloud engagement alert, it lands on top of that conversation. Direct message Jamie, then show the pinned week 7 reading in `#his201-seminar-b`. Jamie's note that the chapter 4 PDF will not open, and the question about Thursday's room, are still unanswered.
